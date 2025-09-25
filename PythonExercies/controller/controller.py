@@ -8,7 +8,7 @@ from models import (
     secuencia,
     not_implemented_stub,
 )
-import views
+import view
 
 # Sólo estos numerales están implementados (tal como pediste)
 IMPLEMENTED = {2, 6, 7, 28}
