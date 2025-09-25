@@ -1,52 +1,57 @@
-# controller.py
-# Controlador mínimo que conecta vista y modelo
+from view.menu import mostrar_menu, pedir_opcion, pedir_entero, pedir_texto, mostrar_resultado
 
-from models import (
-    suma,
-    invertir_texto,
-    serie_armonica,
-    secuencia,
-    not_implemented_stub,
-)
-import view
-
-# Sólo estos numerales están implementados (tal como pediste)
-IMPLEMENTED = {2, 6, 7, 28}
+# Importamos todos los modelos
+from models.Ejercicio1 import fibonacci
+from models.Ejercicio2 import suma
+from models.Ejercicio6 import invertir_texto
+from models.Ejercicio7 import serie_armonica
+from models.Ejercicio9 import log_entero
+from models.Ejercicio10 import contar_digitos
+from models.Ejercicio19 import Sucesion 
+from models.Ejercicio28 import secuencia
 
 
-def ejecutar_ejercicio(numero: int):
-    try:
-        if numero == 2:
-            numero_usuario = views.pedir_entero("Ingrese el numero que desea sumar: ")
-            resultado = suma(numero_usuario)
-            views.mostrar_resultado(f"La suma es: {resultado}")
+def ejecutar():
+    while True:
+        mostrar_menu()
+        opcion = pedir_opcion()
 
-        elif numero == 6:
-            texto = views.pedir_cadena("Ingrese el texto que desea invertir: ")
-            resultado = invertir_texto(texto)
-            views.mostrar_resultado(resultado)
+        if opcion == "1":
+            n = pedir_entero("Introduce n: ")
+            mostrar_resultado(fibonacci(n))
 
-        elif numero == 7:
-            numero_usuario = views.pedir_entero("Ingrese el numero hasta el cual desea la serie armonica: ")
-            resultado = serie_armonica(numero_usuario)
-            views.mostrar_resultado(f"El resultado de la suma de la serie armonica es: {resultado}")
+        elif opcion == "2":
+            n = pedir_entero("Introduce un número: ")
+            mostrar_resultado(suma(n))
 
-        elif numero == 28:
-            numero_usuario = views.pedir_entero("Ingrese el numero de la secuencia: ")
-            resultado = secuencia(numero_usuario)
-            views.mostrar_resultado(f"La secuencia es: {resultado}")
+        elif opcion == "3":
+            texto = pedir_texto("Introduce un texto: ")
+            mostrar_resultado(invertir_texto(texto))
+
+        elif opcion == "4":
+            n = pedir_entero("Introduce n: ")
+            mostrar_resultado(serie_armonica(n))
+
+        elif opcion == "5":
+            n = pedir_entero("Introduce número: ")
+            base = pedir_entero("Introduce base: ")
+            mostrar_resultado(log_entero(n, base))
+
+        elif opcion == "6":
+            n = pedir_entero("Introduce número: ")
+            mostrar_resultado(contar_digitos(n))
+
+        elif opcion == "7":
+            n = pedir_entero("Introduce n: ")
+            mostrar_resultado(Sucesion().f(n))
+
+        elif opcion == "8":
+            n = pedir_entero("Introduce número: ")
+            mostrar_resultado(secuencia(n))
+
+        elif opcion == "0":
+            print("¡Hasta luego!")
+            break
 
         else:
-            views.mostrar_resultado(f"El ejercicio {numero} no está implementado aún. (Agrega la función en models.py)")
-    except Exception as e:
-        views.mostrar_error(str(e))
-
-
-from models.Ejercicio9 import log_entero
-    def run(views):
-    try:
-        n, b = views.pedir_datos()
-        resultado = log_entero(n, b)
-        views.mostrar_resultado(n, b, resultado)
-    except Exception as e:
-        view.mostrar_error(str(e))
+            print("Opción no válida.")
