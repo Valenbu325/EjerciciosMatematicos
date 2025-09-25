@@ -15,7 +15,7 @@ La estructura recomendada para implementar el patrón MVC es la siguiente:
 ```
 ProyectoMVC/
 │
-├── modelos/            # Clases y funciones que representan la lógica de negocio y datos
+├── models/            # Clases y funciones que representan la lógica de negocio y datos
 │   ├── Ejercicio7.py
 │   ├── Ejercicio9.py
 │   ├── Ejercicio19.py
@@ -26,11 +26,11 @@ ProyectoMVC/
 │   ├── Ejercicio6.py 
 │   ├── Ejercicio10.py 
 │
-├── vistas/             # Interfaces de usuario, mensajes y salida visual
+├── view/             # Interfaces de usuario, mensajes y salida visual
 │   ├── menu.py
 │
-├── controladores/      # Lógica de interacción entre modelo y vista
-│   ├── controlador.py
+├── controller/      # Lógica de interacción entre modelo y vista
+│   ├── controller.py
 │   └── ...
 │
 ├── app.py             # Punto de entrada de la aplicación
@@ -93,11 +93,11 @@ Al iniciar el programa, se mostrará un menú con los ejercicios disponibles. El
 3. Ejercicio 6
 4. Ejercicio 7
 5. Ejercicio 9
-6. Ejercicio 1
-7. Ejercicio 10
-8. Ejercicio 19
-9. Ejercicio 24
-10. Ejercicio V
+6. Ejercicio 10
+7. Ejercicio 19
+8. Ejercicio 24
+9. Ejercicio 28
+10. Ejercicio x
 0. Salir
 Seleccione una opción:
 ```
