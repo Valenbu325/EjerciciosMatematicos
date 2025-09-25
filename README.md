@@ -16,23 +16,24 @@ La estructura recomendada para implementar el patrón MVC es la siguiente:
 ProyectoMVC/
 │
 ├── modelos/            # Clases y funciones que representan la lógica de negocio y datos
-│   ├── ejercicio7.py
-│   ├── ejercicio9.py
-│   ├── ejercicio19.py
-│   ├── ejercicio24.py
-│   ├── ejercicio28.py
-│   └── ejercicioX.py   # Otros ejercicios seleccionados
+│   ├── Ejercicio7.py
+│   ├── Ejercicio9.py
+│   ├── Ejercicio19.py
+│   ├── Ejercicio24.py
+│   ├── Ejercicio28.py
+│   ├── Ejercicio1.py  # Otros ejercicios seleccionados
+│   ├── Ejercicio2.py
+│   ├── Ejercicio6.py 
+│   ├── Ejercicio10.py 
 │
 ├── vistas/             # Interfaces de usuario, mensajes y salida visual
 │   ├── menu.py
-│   ├── vista_ejercicio7.py
-│   └── ...
 │
 ├── controladores/      # Lógica de interacción entre modelo y vista
-│   ├── controlador_ejercicio7.py
+│   ├── controlador.py
 │   └── ...
 │
-├── main.py             # Punto de entrada de la aplicación
+├── app.py             # Punto de entrada de la aplicación
 │
 └── README.md           # Documentación del proyecto
 ```
@@ -52,13 +53,12 @@ ProyectoMVC/
 3. **Ejercicio 19**  
 4. **Ejercicio 24**  
 5. **Ejercicio 28**  
-6. **Ejercicio X** (selección del grupo)
-7. **Ejercicio Y** (selección del grupo)
-8. **Ejercicio Z** (selección del grupo)
-9. **Ejercicio W** (selección del grupo)
+6. **Ejercicio 1** 
+7. **Ejercicio 2** 
+8. **Ejercicio 6** 
+9. **Ejercicio 10** 
 10. **Ejercicio V** (selección del grupo)
 
-> **Nota:** Actualiza los nombres de los ejercicios seleccionados por el grupo y describe brevemente cada uno en este apartado.
 
 ## ¿Cómo ejecutar el proyecto?
 
@@ -88,15 +88,15 @@ Al iniciar el programa, se mostrará un menú con los ejercicios disponibles. El
 ==============================
    Menú de Ejercicios MVC
 ==============================
-1. Ejercicio 7
-2. Ejercicio 9
-3. Ejercicio 19
-4. Ejercicio 24
-5. Ejercicio 28
-6. Ejercicio X
-7. Ejercicio Y
-8. Ejercicio Z
-9. Ejercicio W
+1. Ejercicio 1
+2. Ejercicio 2
+3. Ejercicio 6
+4. Ejercicio 7
+5. Ejercicio 9
+6. Ejercicio 1
+7. Ejercicio 10
+8. Ejercicio 19
+9. Ejercicio 24
 10. Ejercicio V
 0. Salir
 Seleccione una opción:
