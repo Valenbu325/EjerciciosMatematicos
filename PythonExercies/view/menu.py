@@ -7,7 +7,7 @@ def mostrar_menu():
     print("5. Logaritmo entero")
     print("6. Contar dígitos")
     print("7. sucesión especial")
-    print("8. HAce Aron")
+    print("8. ")
     print("9. secuencia")
     print("0. Salir")
 
