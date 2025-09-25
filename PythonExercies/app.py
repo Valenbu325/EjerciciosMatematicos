@@ -1,4 +1,4 @@
-from view.menu import pedir_opcion, mostrar_menu
+from view.menu import mostrar_menu, pedir_opcion
 from controller.controller import ejecutar_ejercicio
 
 
