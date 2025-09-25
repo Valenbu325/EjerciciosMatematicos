@@ -1,4 +1,4 @@
-class Ejercicio19Model:
+class Ejercicio19:
     def f(self, n: int) -> float:
         """Función recursiva de la sucesión."""
         if n == 1:
