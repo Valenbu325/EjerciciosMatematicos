@@ -1,8 +1,8 @@
-def Sucesion(self, n: int) -> float:
+def sucesion_especial(numero: int) -> float:
         """Función recursiva de la sucesión."""
-        if n == 1:
+        if numero == 1:
             return 2
-        elif n >= 2:
-            return n + 1 / self.f(n - 1)
+        elif numero >= 2:
+            return numero + 1 / sucesion_especial(numero - 1)
         else:
-            raise ValueError("n debe ser un entero positivo.")
+            raise ValueError("numero debe ser un entero positivo.")
