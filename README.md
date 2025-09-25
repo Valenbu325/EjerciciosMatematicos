@@ -48,15 +48,15 @@ ProyectoMVC/
 
 ## Ejercicios incluidos
 
-1. **Ejercicio 7**  
-2. **Ejercicio 9**  
-3. **Ejercicio 19**  
+1. **Ejercicio 7 Serie Armónica**  
+2. **Ejercicio 9 Logaritmo Entero**  
+3. **Ejercicio 19 Sucesión Especial**  
 4. **Ejercicio 24**  
-5. **Ejercicio 28**  
-6. **Ejercicio 1** 
-7. **Ejercicio 2** 
-8. **Ejercicio 6** 
-9. **Ejercicio 10** 
+5. **Ejercicio 28 Secuencia**  
+6. **Ejercicio 1 Fibonacci** 
+7. **Ejercicio 2 Suma de Números** 
+8. **Ejercicio 6 Invertir Texto** 
+9. **Ejercicio 10 Contar Dígitos** 
 10. **Ejercicio V** (selección del grupo)
 
 
