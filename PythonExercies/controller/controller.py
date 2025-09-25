@@ -40,3 +40,13 @@ def ejecutar_ejercicio(numero: int):
             views.mostrar_resultado(f"El ejercicio {numero} no está implementado aún. (Agrega la función en models.py)")
     except Exception as e:
         views.mostrar_error(str(e))
+
+
+from models.Ejercicio9 import log_entero
+    def run(views):
+    try:
+        n, b = views.pedir_datos()
+        resultado = log_entero(n, b)
+        views.mostrar_resultado(n, b, resultado)
+    except Exception as e:
+        view.mostrar_error(str(e))
