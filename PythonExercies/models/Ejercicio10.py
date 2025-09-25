@@ -1,4 +1,4 @@
-def contar_digitos(n):
-    n = abs(n)
-    if n < 10: return 1
-    return 1 + contar_digitos(n//10)
+def contar_digitos(numero):
+    numero = abs(numero)
+    if numero < 10: return 1
+    return 1 + contar_digitos(numero//10)
