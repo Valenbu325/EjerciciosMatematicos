@@ -1,57 +1,69 @@
-from view.menu import mostrar_menu, pedir_opcion, pedir_entero, pedir_texto, mostrar_resultado
-
-# Importamos todos los modelos
+# controller.py
+# Controlador mínimo que conecta vista y modelo
 from models.Ejercicio1 import fibonacci
 from models.Ejercicio2 import suma
 from models.Ejercicio6 import invertir_texto
 from models.Ejercicio7 import serie_armonica
-from models.Ejercicio9 import log_entero
+from models.Ejercicio9 import logaritmo_entero
 from models.Ejercicio10 import contar_digitos
-from models.Ejercicio19 import Sucesion 
+from models.Ejercicio19 import sucesion_especial
+#from models.Ejercicio24 import funcion_24
 from models.Ejercicio28 import secuencia
 
+import view.menu as menu
 
-def ejecutar():
-    while True:
-        mostrar_menu()
-        opcion = pedir_opcion()
-
+def ejecutar_ejercicio(opcion: str):
+    try:
         if opcion == "1":
-            n = pedir_entero("Introduce n: ")
-            mostrar_resultado(fibonacci(n))
-
+            numero_usuario = menu.pedir_entero("Ingrese el numero de la serie Fibonacci que desea: ")
+            resultado = fibonacci(numero_usuario)
+            menu.mostrar_resultado(f"El numero de la serie Fibonacci es: {resultado}")
+        
         elif opcion == "2":
-            n = pedir_entero("Introduce un número: ")
-            mostrar_resultado(suma(n))
-
-        elif opcion == "3":
-            texto = pedir_texto("Introduce un texto: ")
-            mostrar_resultado(invertir_texto(texto))
-
-        elif opcion == "4":
-            n = pedir_entero("Introduce n: ")
-            mostrar_resultado(serie_armonica(n))
-
-        elif opcion == "5":
-            n = pedir_entero("Introduce número: ")
-            base = pedir_entero("Introduce base: ")
-            mostrar_resultado(log_entero(n, base))
-
+            numero_usuario = menu.pedir_entero("Ingrese el numero que desea sumar: ")
+            resultado = suma(numero_usuario)
+            menu.mostrar_resultado(f"La suma es: {resultado}")
+            
         elif opcion == "6":
-            n = pedir_entero("Introduce número: ")
-            mostrar_resultado(contar_digitos(n))
-
+            texto = menu.pedir_texto("Ingrese el texto que desea invertir: ")
+            resultado = invertir_texto(texto)
+            menu.mostrar_resultado(resultado)
+            
         elif opcion == "7":
-            n = pedir_entero("Introduce n: ")
-            mostrar_resultado(Sucesion().f(n))
+            numero_usuario = menu.pedir_entero("Ingrese el numero hasta el cual desea la serie armonica: ")
+            resultado = serie_armonica(numero_usuario)
+            menu.mostrar_resultado(f"El resultado de la suma de la serie armonica es: {resultado}")
+        
+        elif opcion == "9":
+            numero_usuario = menu.pedir_entero("Ingrese el numero: ")
+            base_usuario = menu.pedir_entero("Ingrese la base: ")
+            resultado = logaritmo_entero(numero_usuario, base_usuario)
+            menu.mostrar_resultado(f"El logaritmo entero es: {resultado}")
+        
+        elif opcion == "10":
+            numero_usuario = menu.pedir_entero("Ingrese el numero: ")
+            resultado = contar_digitos(numero_usuario)
+            menu.mostrar_resultado(f"El numero de digitos es: {resultado}")
+        
+        elif opcion == "19":
+            numero_usuario = menu.pedir_entero("Ingrese el numero de la sucesión: ")
+            resultado = sucesion_especial(numero_usuario)
+            menu.mostrar_resultado(f"El resultado de la sucesión es: {resultado}")
+            
+#        elif opcion == "24":
+#            numero_usuario = menu.pedir_entero("Ingrese el numero: ")
+#            resultado = funcion_24(numero_usuario)
 
-        elif opcion == "8":
-            n = pedir_entero("Introduce número: ")
-            mostrar_resultado(secuencia(n))
-
-        elif opcion == "0":
-            print("¡Hasta luego!")
-            break
-
+        elif opcion == "28":
+            numero_usuario = menu.pedir_entero("Ingrese el numero de la secuencia: ")
+            resultado = secuencia(numero_usuario)
+            menu.mostrar_resultado(f"La secuencia es: {resultado}")
+        
         else:
-            print("Opción no válida.")
+            menu.mostrar_resultado(f"El ejercicio {opcion} no está implementado aún. (Agrega la función en models.py)")
+            
+    except Exception as e:
+        menu.mostrar_resultado(str(e))
+        
+# Lista de ejercicios implementados
+IMPLEMENTED = ["1", "2", "3", "4", "5", "6", "7", "9"])
