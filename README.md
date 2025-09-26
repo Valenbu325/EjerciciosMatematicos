@@ -64,8 +64,8 @@ ProyectoMVC/
 
 1. Clona el repositorio:
     ```bash
-    git clone https://github.com/usuario/ProyectoMVC.git
-    cd ProyectoMVC
+    git clone https://github.com/Valenbu325/EjerciciosMatematicos.git
+    cd EjerciciosMatematicos
     ```
 
 2. Instala los requisitos (si existen):
@@ -75,9 +75,8 @@ ProyectoMVC/
 
 3. Ejecuta el archivo principal:
     ```bash
-    python main.py
+    python app.py
     ```
-
 4. Sigue las instrucciones en pantalla para seleccionar y resolver los ejercicios.
 
 ## Ejemplo de uso
@@ -127,3 +126,4 @@ Este proyecto está bajo la licencia MIT. Consulta el archivo `LICENSE` para má
 
 > **Referencia de la consigna:**  
 > Desarrollar un proyecto en Python que implemente el patrón de arquitectura Modelo-Vista-Controlador (MVC). El proyecto deberá incluir un menú que presente los ejercicios numerales 7, 9, 19, 24, 28 y el grupo debe seleccionar cinco ejercicios más para un total de 10 de los 31 ejercicios planteados.
+
